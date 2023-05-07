@@ -1,0 +1,17 @@
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\Lab 11_ServiceCSh.csproj.AssemblyReference.cache
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\Lab 11_ServiceCSh.GeneratedMSBuildEditorConfig.editorconfig
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\Lab 11_ServiceCSh.AssemblyInfoInputs.cache
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\Lab 11_ServiceCSh.AssemblyInfo.cs
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\Lab 11_ServiceCSh.csproj.CoreCompileInputs.cache
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\bin\Debug\net6.0\Lab 11_ServiceCSh.exe
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\bin\Debug\net6.0\Lab 11_ServiceCSh.deps.json
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\bin\Debug\net6.0\Lab 11_ServiceCSh.runtimeconfig.json
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\bin\Debug\net6.0\Lab 11_ServiceCSh.dll
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\bin\Debug\net6.0\Lab 11_ServiceCSh.pdb
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\Lab 11_ServiceCSh.csproj.CopyComplete
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\Lab 11_ServiceCSh.dll
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\refint\Lab 11_ServiceCSh.dll
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\Lab 11_ServiceCSh.pdb
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\Lab 11_ServiceCSh.genruntimeconfig.cache
+E:\PhD Bogdan Alexe\_MDS_22_23\MDS_22_23\Lab 11_ServiceCSh\obj\Debug\net6.0\ref\Lab 11_ServiceCSh.dll

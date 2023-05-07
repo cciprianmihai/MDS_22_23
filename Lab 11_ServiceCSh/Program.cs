@@ -1,0 +1,117 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SortMicroserviceExample
+{
+    class Program
+    {
+        static async Task test_asc()
+        {
+            // Set the vector to sort
+            var vector = new List<int> { 5, 3, 1, 4, 2 };
+
+            // Create the request payload
+            var payload = new Dictionary<string, List<int>>
+            {
+                { "vector", vector }
+            };
+
+            // Convert the payload to JSON
+            var jsonPayload = Newtonsoft.Json.JsonConvert.SerializeObject(payload);
+
+            // Set the URL of the microservice
+            var apiUrl = "http://localhost:5000/sort";
+
+            // Create a HttpClient instance
+            using (var httpClient = new HttpClient())
+            {
+                // Create a HttpRequestMessage with the JSON payload
+                var request = new HttpRequestMessage(HttpMethod.Post, apiUrl);
+                request.Content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+
+                // Send the request and get the response
+                var response = await httpClient.SendAsync(request);
+
+                // Check if the request was successful
+                if (response.IsSuccessStatusCode)
+                {
+                    // Read the response content
+                    var responseContent = await response.Content.ReadAsStringAsync();
+
+                    // Deserialize the response JSON
+                    var result = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<int>>>(responseContent);
+
+                    // Get the sorted vector from the response
+                    var sortedVector = result["sorted_vector"];
+
+                    // Print the sorted vector
+                    Console.WriteLine("Sorted vector asc: " + string.Join(", ", sortedVector));
+                }
+                else
+                {
+                    Console.WriteLine("Error: " + response.StatusCode);
+                }
+            }
+            Console.ReadLine();
+        }
+
+        static async Task test_desc()
+        {
+            // Set the vector to sort
+            var vector = new List<int> { 5, 3, 1, 4, 2 };
+
+            // Create the request payload
+            var payload = new Dictionary<string, List<int>>
+            {
+                { "vector", vector }
+            };
+
+            // Convert the payload to JSON
+            var jsonPayload = Newtonsoft.Json.JsonConvert.SerializeObject(payload);
+
+            // Set the URL of the microservice
+            var apiUrl = "http://localhost:5001/sort";
+
+            // Create a HttpClient instance
+            using (var httpClient = new HttpClient())
+            {
+                // Create a HttpRequestMessage with the JSON payload
+                var request = new HttpRequestMessage(HttpMethod.Post, apiUrl);
+                request.Content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+
+                // Send the request and get the response
+                var response = await httpClient.SendAsync(request);
+
+                // Check if the request was successful
+                if (response.IsSuccessStatusCode)
+                {
+                    // Read the response content
+                    var responseContent = await response.Content.ReadAsStringAsync();
+
+                    // Deserialize the response JSON
+                    var result = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<int>>>(responseContent);
+
+                    // Get the sorted vector from the response
+                    var sortedVector = result["sorted_vector"];
+
+                    // Print the sorted vector
+                    Console.WriteLine("Sorted vector desc: " + string.Join(", ", sortedVector));
+                }
+                else
+                {
+                    Console.WriteLine("Error: " + response.StatusCode);
+                }
+            }
+            Console.ReadLine();
+        }
+
+        static async Task Main(string[] args)
+        {
+            await test_asc();
+            await test_desc();
+        }
+    }
+}

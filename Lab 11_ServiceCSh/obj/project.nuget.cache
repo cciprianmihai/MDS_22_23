@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "duy5McVBcsV5ABkd9WaFM921XuBZs2vU2zJjjOgGTFuW6GCRxdx9+xUqvOyOEuA1NkGm8DfjOlYOX0mSoseu8w==",
+  "success": true,
+  "projectFilePath": "E:\\PhD Bogdan Alexe\\_MDS_22_23\\MDS_22_23\\Lab 11_ServiceCSh\\Lab 11_ServiceCSh.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ciprian\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
