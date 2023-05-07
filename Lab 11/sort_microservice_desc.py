@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import requests
 
 app = Flask(__name__)
@@ -9,9 +9,9 @@ def sort_vector():
     vector = data.get('vector')
     if vector:
         sorted_vector = sorted(vector, reverse=True)
-        return {'sorted_vector': sorted_vector}
+        return jsonify({'sorted_vector': sorted_vector})
     else:
-        return {'error': 'Invalid data'}, 400
+        return jsonify({'error': 'Invalid data'}), 400
 
 if __name__ == '__main__':
     app.run(port=5001)
