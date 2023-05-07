@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SortMicroserviceExample
+{
+    class Program
+    {
+        static async Task Main(string[] args)
+        {
+            // Define the vector to sort
+            var vector = new List<int> { 5, 3, 1, 4, 2 };
+
+            // Create the request payload
+            var payload = new Dictionary<string, List<int>>()
+            {
+                { "vector", vector }
+            };
+
+            // Convert the payload to JSON
+            var jsonPayload = Newtonsoft.Json.JsonConvert.SerializeObject(payload);
+
+            // Set the URL of the microservice
+            var apiUrl = "http://localhost:5000/sort";
+
+            // Send the POST request to the microservice
+            using (var httpClient = new HttpClient())
+            {
+                // Set the content type to JSON
+                httpClient.DefaultRequestHeaders.Add("Content-Type", "application/json");
+
+                // Send the POST request and get the response
+                var response = await httpClient.PostAsync(apiUrl, new StringContent(jsonPayload, Encoding.UTF8, "application/json"));
+
+                // Read the response content
+                var responseContent = await response.Content.ReadAsStringAsync();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    // Deserialize the response JSON
+                    var result = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<int>>>(responseContent);
+
+                    // Get the sorted vector from the response
+                    var sortedVector = result["sorted_vector"];
+
+                    // Print the sorted vector
+                    Console.WriteLine("Sorted vector: " + string.Join(", ", sortedVector));
+                }
+                else
+                {
+                    // Print the error message
+                    Console.WriteLine("Error: " + responseContent);
+                }
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
